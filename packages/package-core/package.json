@@ -1,9 +1,23 @@
 {
   "name": "package-core",
   "version": "1.0.0",
-  "main": "dist/src/index.js",
+  "main": "dist/index.js",
   "module": "dist/es/index.js",
   "license": "MIT",
+  "scripts": {
+    "clean": "rm -rf dist",
+    "watch": "yarn build:cjs --watch",
+    "build": "yarn build:cjs && yarn build:es",
+    "build:cjs": "babel src --out-dir dist --quiet",
+    "build:es": "BABEL_ENV=es babel src --out-dir dist/es --quiet"
+  },
+  "devDependencies": {
+    "@babel/cli": "7.0.0-beta.41",
+    "@babel/core": "7.0.0-beta.41",
+    "@babel/preset-env": "7.0.0-beta.41",
+    "@babel/preset-react": "7.0.0-beta.41",
+    "@babel/preset-stage-2": "7.0.0-beta.41"
+  },
   "dependencies": {
     "lodash": "4.17.5"
   }
