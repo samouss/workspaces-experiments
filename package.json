@@ -9,6 +9,17 @@
   "main": "index.js",
   "license": "MIT",
   "private": true,
+  "scripts": {
+    "bootstrap": "yarn && lerna run prepare",
+    "clean": "yarn clean:build && yarn clean:modules",
+    "clean:build": "rm -rf {examples,packages}/*/{dist,build}",
+    "clean:modules": "rm -rf node_modules {examples,packages}/*/node_modules",
+    "build": "lerna run build",
+    "build:packages": "lerna run build --scope package-*",
+    "build:examples": "lerna run build --scope example-*",
+    "watch": "lerna run watch --parallel",
+    "release": "yarn clean && yarn && yarn build:packages && lerna publish --exact --skip-git --skip-npm"
+  },
   "devDependencies": {
     "lerna": "2.9.0"
   }
