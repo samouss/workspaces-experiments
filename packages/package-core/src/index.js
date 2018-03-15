@@ -1,7 +1,7 @@
 import { random } from 'lodash';
 
 const createCorePackage = () => {
-  const version = random();
+  const version = random(50);
 
   return { version };
 };
