@@ -5,7 +5,6 @@
   "module": "dist/es/index.js",
   "license": "MIT",
   "scripts": {
-    "clean": "rm -rf dist",
     "watch": "yarn build:cjs --watch",
     "prepare": "yarn build:cjs",
     "build": "yarn build:cjs && yarn build:es",
