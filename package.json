@@ -1,12 +1,11 @@
 {
   "name": "workspaces-experiments",
+  "description": "Workspaces experiments",
   "version": "1.0.0",
   "workspaces": [
     "packages/*",
     "examples/*"
   ],
-  "description": "Workspaces experiments",
-  "main": "index.js",
   "license": "MIT",
   "private": true,
   "scripts": {
