@@ -8,5 +8,8 @@
   "description": "Workspaces experiments",
   "main": "index.js",
   "license": "MIT",
-  "private": true
+  "private": true,
+  "devDependencies": {
+    "lerna": "2.9.0"
+  }
 }
