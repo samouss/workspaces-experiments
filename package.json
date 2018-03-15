@@ -21,6 +21,11 @@
     "release": "yarn clean && yarn && yarn build:packages && lerna publish --exact --skip-git --skip-npm"
   },
   "devDependencies": {
+    "@babel/cli": "7.0.0-beta.41",
+    "@babel/core": "7.0.0-beta.41",
+    "@babel/preset-env": "7.0.0-beta.41",
+    "@babel/preset-react": "7.0.0-beta.41",
+    "@babel/preset-stage-2": "7.0.0-beta.41",
     "lerna": "2.9.0"
   }
 }
