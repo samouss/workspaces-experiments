@@ -9,10 +9,8 @@
   "license": "MIT",
   "private": true,
   "scripts": {
-    "bootstrap": "yarn && lerna run prepare",
-    "clean": "yarn clean:build && yarn clean:modules",
-    "clean:build": "rm -rf {examples,packages}/*/{dist,build}",
-    "clean:modules": "rm -rf node_modules {examples,packages}/*/node_modules",
+    "bootstrap": "git clean -dfX && yarn",
+    "prepare": "lerna run prepare",
     "build": "lerna run build",
     "build:packages": "lerna run build --scope package-*",
     "build:examples": "lerna run build --scope example-*",
