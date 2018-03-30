@@ -1,9 +1,13 @@
 import React, { Component } from 'react';
-import createNativePackage from 'package-native';
+import { Touchable, createClient } from 'package-native';
 import logo from './logo.svg';
 import './App.css';
 
+const client = createClient();
+
 class App extends Component {
+  onClick = () => client.print();
+
   render() {
     return (
       <div className="App">
@@ -11,9 +15,9 @@ class App extends Component {
           <img src={logo} className="App-logo" alt="logo" />
           <h1 className="App-title">Welcome to Native</h1>
         </header>
-        <p className="App-intro">
-          {createNativePackage()}
-        </p>
+        <section className="App-intro">
+          <Touchable onClick={this.onClick} />
+        </section>
       </div>
     );
   }
