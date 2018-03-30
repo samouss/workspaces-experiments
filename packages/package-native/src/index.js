@@ -1,10 +1,7 @@
-import { get } from 'lodash';
-import createCorePackage from 'package-core';
+// Core
+export { createClient } from 'package-core';
+export { createUselessIndex } from 'package-core';
 
-const createNativePackage = () => {
-  const version = get(createCorePackage(), 'version');
-
-  return `Native package running with core version: ${version}`;
-};
-
-export default createNativePackage;
+// DOM
+export { default as Touchable } from './Touchable';
+export { default as Useless } from './Useless';
