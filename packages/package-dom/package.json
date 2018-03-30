@@ -7,7 +7,6 @@
   "license": "MIT",
   "scripts": {
     "watch": "yarn build:cjs --watch",
-    "prepare": "yarn build:cjs",
     "build": "yarn build:cjs && yarn build:es",
     "build:cjs": "babel src --out-dir dist/cjs --quiet",
     "build:es": "BABEL_ENV=es babel src --out-dir dist/es --quiet"

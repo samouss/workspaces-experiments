@@ -10,7 +10,7 @@
   "private": true,
   "scripts": {
     "bootstrap": "git clean -dfX && yarn",
-    "prepare": "lerna run prepare",
+    "prepare": "yarn build:packages",
     "build": "lerna run build",
     "build:packages": "lerna run build --scope package-*",
     "build:examples": "lerna run build --scope example-*",
