@@ -1,10 +1,7 @@
-import { get } from 'lodash';
-import createCorePackage from 'package-core';
+// Core
+export { createClient } from 'package-core';
+export { createUselessIndex } from 'package-core';
 
-const createDomPackage = () => {
-  const version = get(createCorePackage(), 'version');
-
-  return `DOM package running with core version: ${version}`;
-};
-
-export default createDomPackage;
+// DOM
+export { default as Button } from './Button';
+export { default as Useless } from './Useless';
