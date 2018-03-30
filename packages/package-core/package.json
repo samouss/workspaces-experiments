@@ -11,8 +11,5 @@
     "build": "yarn build:cjs && yarn build:es",
     "build:cjs": "babel src --out-dir dist/cjs --quiet",
     "build:es": "BABEL_ENV=es babel src --out-dir dist/es --quiet"
-  },
-  "dependencies": {
-    "lodash": "4.17.5"
   }
 }
